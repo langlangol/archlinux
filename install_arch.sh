@@ -152,6 +152,23 @@ QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 EOT
 
+# 模拟无限历史记录大小 >> ~/.bashrc
+HISTSIZE=  >> ~/.bashrc
+HISTFILESIZE=  >> ~/.bashrc
+
+# 不忽略重复命令  >> ~/.bashrc
+HISTCONTROL=  >> ~/.bashrc
+
+# 立即保存命令历史记录  >> ~/.bashrc
+PROMPT_COMMAND='history -a; history -c; history -r'  >> ~/.bashrc
+
+# 强制将历史记录写入文件  >> ~/.bashrc
+shopt -s histappend  >> ~/.bashrc
+
+# 记录命令执行时间  >> ~/.bashrc
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "  >> ~/.bashrc
+
+
 # 将vim设置为默认编辑器
 echo "export EDITOR=vim" >> /etc/profile
 
